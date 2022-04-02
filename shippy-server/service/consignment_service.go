@@ -2,6 +2,7 @@ package service
 
 import (
 	"context"
+	"fmt"
 
 	pb "github.com/shippy/shippy-service/proto/consignment"
 )
@@ -22,6 +23,7 @@ func NewShippingServiceServer() *Shipping_serviceServer {
 
 func (s *Shipping_serviceServer) CreateConsignment(ctx context.Context, consignment *pb.Consignment) (*pb.Response, error) {
 	var ret *pb.Response
+		fmt.Println("helo world")
 	return ret, nil
 }
 func (s *Shipping_serviceServer) GetConsignments(ctx context.Context, consignment *pb.GetRequest) (*pb.Response, error) {
